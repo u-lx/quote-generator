@@ -11,13 +11,12 @@ const author_arr = Array(quotes_arr.length).fill('— Inspirobot')
 function generate() {
   let random = Math.floor(Math.random() * quotes_arr.length);
   document.getElementById('text').setAttribute('class','text-hide');
-  // $('#text').attr('class','text-hide');
   document.getElementById('author').setAttribute('class','text-hide');
 
   setTimeout(() => {
     document.getElementById('text').innerHTML = quotes_arr[random];
     document.getElementById('author').innerHTML = author_arr[random];
     document.getElementById('text').setAttribute('class','text-show');
-    document.getElementById('author').setAttribute('class','text- show');
+    document.getElementById('author').setAttribute('class','text-show');
   },2500)
 }
